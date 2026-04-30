@@ -1,8 +1,8 @@
-# Proto - ClickHouse AI Agent
+# clickr — natural-language CLI for ClickHouse
 
-> Natural language interface for ClickHouse databases
+> Ask questions, generate SQL, get insights. Without writing SQL.
 
-Proto is an intelligent CLI agent that allows you to interact with ClickHouse databases using natural language. Ask questions about your data, generate SQL queries, and get insights without writing complex SQL.
+`clickr` is a CLI agent that lets you interact with ClickHouse® databases in plain English. It analyzes your tables, generates the right SQL, runs it, and shows you the answer. Works with local LLMs (Ollama, llama.cpp) or cloud ones (OpenAI, Anthropic).
 
 ## Features
 
@@ -20,13 +20,13 @@ Proto is an intelligent CLI agent that allows you to interact with ClickHouse da
 ### Install Proto
 
 ```bash
-curl -fsSL https://proto.dev/install.sh | sh
+curl -fsSL https://clickr.dev/install.sh | sh
 ```
 
 ### Start Using Proto
 
 ```bash
-proto
+clickr
 ```
 
 Follow the interactive onboarding to configure your ClickHouse connection and AI provider.
@@ -35,33 +35,33 @@ Follow the interactive onboarding to configure your ClickHouse connection and AI
 
 ### Using pipx (Recommended)
 ```bash
-pipx install proto-clickhouse-agent
+pipx install clickr
 ```
 
 ### Using pip
 ```bash
-pip install proto-clickhouse-agent
+pip install clickr
 ```
 
 ### One-liner (Legacy)
 ```bash
-curl -fsSL https://proto.dev/install.sh | sh
+curl -fsSL https://clickr.dev/install.sh | sh
 ```
 
 ## Usage Examples
 
 ```bash
 # Start interactive chat
-proto
+clickr
 
 # Execute a single query
-proto query "Show me the top 10 users by activity"
+clickr query "Show me the top 10 users by activity"
 
 # Analyze a specific table
-proto analyze users
+clickr analyze users
 
 # Load data from a file
-proto load-data users.csv users
+clickr load-data users.csv users
 ```
 
 ## Configuration
@@ -72,7 +72,7 @@ Proto supports multiple AI providers:
 - **Local LLM**: Built-in ClickHouse AI model (no API keys needed)
 - **OpenAI**: Direct OpenAI API integration
 
-Configuration is stored in `~/.config/proto/proto-config.json`.
+Configuration is stored in `~/.config/clickr/clickr-config.json`.
 
 ## System Requirements
 
@@ -87,8 +87,8 @@ Configuration is stored in `~/.config/proto/proto-config.json`.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/proto.git
-cd proto
+git clone https://github.com/erphq/clickr.git
+cd clickr
 
 # Create virtual environment
 python -m venv venv
@@ -112,7 +112,7 @@ This creates platform-specific binaries in the `builds/` directory.
 ## Architecture
 
 ```
-proto/
+clickr/
 ├── agent/           # Core AI agent logic
 ├── config/          # Configuration management
 ├── providers/       # AI provider integrations
@@ -136,9 +136,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📖 [Documentation](https://proto.dev)
-- 🐛 [Report Issues](https://github.com/yourusername/proto/issues)
-- 💬 [Discussions](https://github.com/yourusername/proto/discussions)
+- 📖 [Documentation](https://clickr.dev)
+- 🐛 [Report Issues](https://github.com/erphq/clickr/issues)
+- 💬 [Discussions](https://github.com/erphq/clickr/discussions)
 
 ## Roadmap
 
@@ -147,3 +147,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Advanced data visualization
 - [ ] Query optimization suggestions
 - [ ] Multi-database support
+
+## Trademark notice
+
+This project is not affiliated with, endorsed by, or sponsored by ClickHouse, Inc. **ClickHouse®** is a registered trademark of ClickHouse, Inc. The use of the name in this project's description and documentation is purely descriptive ("a CLI **for** ClickHouse") under their [trademark policy](https://clickhouse.com/legal/trademark-policy).

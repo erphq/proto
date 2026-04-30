@@ -11,14 +11,14 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-    name="proto-clickhouse-agent",
+    name="clickr",
     version="1.0.3",
-    author="Proto Team",
-    author_email="team@proto.dev",
-    description="ClickHouse AI Agent - Natural language interface for ClickHouse databases",
+    author="ERP•AI",
+    author_email="team@erp.ai",
+    description="Natural-language CLI for ClickHouse® — text-to-SQL with local or cloud LLMs. Not affiliated with ClickHouse, Inc.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/proto",
+    url="https://github.com/erphq/clickr",
     packages=find_packages(),
     # Ensure top-level CLI module is included so entry point works
     py_modules=["main"],
@@ -71,7 +71,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "proto=main:app",
+            "clickr=main:app",
         ],
     },
     include_package_data=True,

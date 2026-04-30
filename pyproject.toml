@@ -3,18 +3,18 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "proto-clickhouse-agent"
+name = "clickr"
 version = "1.0.3"
-description = "ClickHouse AI Agent - Natural language interface for ClickHouse databases"
+description = "Natural-language CLI for ClickHouse® — text-to-SQL with local or cloud LLMs. Not affiliated with ClickHouse, Inc."
 readme = "README.md"
 license = "MIT"
 authors = [
-    {name = "Proto Team", email = "team@proto.dev"}
+    {name = "ERP•AI", email = "team@erp.ai"}
 ]
 maintainers = [
-    {name = "Proto Team", email = "team@proto.dev"}
+    {name = "ERP•AI", email = "team@erp.ai"}
 ]
-keywords = ["clickhouse", "ai", "agent", "database", "sql", "nlp"]
+keywords = ["clickhouse", "cli", "text-to-sql", "natural-language-query", "sql-generation", "analytics", "nlp"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -65,14 +65,13 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/vishprometa/proto"
-Documentation = "https://proto.dev"
-Repository = "https://github.com/vishprometa/proto"
-Issues = "https://github.com/vishprometa/proto/issues"
-Changelog = "https://github.com/vishprometa/proto/releases"
+Homepage = "https://github.com/erphq/clickr"
+Repository = "https://github.com/erphq/clickr"
+Issues = "https://github.com/erphq/clickr/issues"
+Changelog = "https://github.com/erphq/clickr/releases"
 
 [project.scripts]
-proto = "main:app"
+clickr = "main:app"
 
 [tool.setuptools]
 packages = ["agent", "config", "providers", "tools", "ui", "utils"]
