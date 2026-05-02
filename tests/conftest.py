@@ -31,7 +31,14 @@ def _isolate_env(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Iterator[No
     for key in list(os.environ):
         if key.startswith(_RELEVANT_PREFIXES):
             monkeypatch.delenv(key, raising=False)
+    # `Path.home()` reads HOME on POSIX but USERPROFILE on Windows
+    # (with HOMEDRIVE + HOMEPATH as a fallback). Set all three to
+    # tmp_path so the loader's `~/.config/proto/...` probe lands in
+    # the sandbox on every OS the CI matrix runs.
     monkeypatch.setenv("HOME", str(tmp_path))
+    monkeypatch.setenv("USERPROFILE", str(tmp_path))
+    monkeypatch.setenv("HOMEDRIVE", str(tmp_path.drive) if tmp_path.drive else "")
+    monkeypatch.setenv("HOMEPATH", str(tmp_path)[len(tmp_path.drive) :])
     yield
 
 
