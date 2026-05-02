@@ -7,7 +7,7 @@ name = "clickr"
 version = "1.0.3"
 description = "Natural-language CLI for ClickHouse® — text-to-SQL with local or cloud LLMs. Not affiliated with ClickHouse, Inc."
 readme = "README.md"
-license = "MIT"
+license = { text = "MIT" }
 authors = [
     {name = "ERP•AI", email = "team@erp.ai"}
 ]
