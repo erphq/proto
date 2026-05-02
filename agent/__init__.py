@@ -1,3 +1,3 @@
 from .clickhouse_agent import ClickHouseAgent
 
-__all__ = ['ClickHouseAgent']
+__all__ = ["ClickHouseAgent"]
