@@ -6,6 +6,8 @@
 
 Ask in English. Get SQL, results, charts. No syntax to memorize.
 
+![tests](https://img.shields.io/badge/tests-46%20passing-yellow)
+
 [![pypi](https://img.shields.io/pypi/v/clickr.svg)](https://pypi.org/project/clickr/)
 [![python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](#requirements)
 [![license](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
